@@ -1,0 +1,12 @@
+h1 {
+    color:#0c9ee2;
+    text-align: center;
+}
+
+#searchBar {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
