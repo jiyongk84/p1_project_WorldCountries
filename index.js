@@ -49,7 +49,7 @@ function getCountries() {
       }//);
 
       function listOneCountry(country) {
-        let card = document.createElement('li')
+        let card = document.createElement('div')
         card.className = 'card'
         card.innerHTML = `
             <div class="country">
@@ -61,7 +61,7 @@ function getCountries() {
             <img src="${country.flags.png}">
             </div> `
          
-        document.querySelector('#country-list').appendChild(card)
+        document.querySelector('.country-cards').appendChild(card)
     }
 
     function displayNoResult() {
