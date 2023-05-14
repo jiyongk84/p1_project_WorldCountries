@@ -9,13 +9,12 @@ function worldCountries() {
 
 const searchBox = document.querySelector('#inputBox')
 const submitButton = document.querySelector('.submit')
-//const resultDiv = document.querySelector('#country-cards');
 
 function getCountries() {
         const inputValue = searchBox.value.trim();
       
         if (inputValue === '') {
-          resultDiv.textContent = 'Please enter a search term.';
+          alert('Please enter a search term.');
           return;
         }
     fetch('https://restcountries.com/v3.1/all')
