@@ -19,15 +19,18 @@ function getCountries() {
             alert('Please enter a search term.');
           return;
         }
-    
-        searchBox.addEventListener('blur', (event) => {
-            const inputValue = searchBox.value.toLowerCase();
-            const existingElement = container.querySelector('#country-list').contains(`${inputValue})`);
-          
-            if (existingElement) {
-              event.preventDefault();
-              alert('Duplicate value found!');
-            }
+        const container = document.querySelector('#country-cards');
+        const inputField = document.querySelector('#inputBox');
+            inputField.addEventListener('submit', (event) => {
+                const inputValue = inputField.value.toLowerCase();
+                const containerElements = container.querySelectorAll('li');
+              
+                containerElements.forEach(element => {
+                  if (element.textContent.toLowerCase() === inputValue) {
+                    event.preventDefault();
+                    alert('Value already exists!');
+                  }
+            })
         })
     fetch('https://restcountries.com/v3.1/all')
     .then((resp) => resp.json())
