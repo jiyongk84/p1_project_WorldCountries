@@ -1,3 +1,4 @@
+
 header {
     background-color: #e77213;
     height: 100px;
@@ -45,18 +46,18 @@ input {
     
 }
 #country-cards {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: grid;
+    /* flex-direction: column;
+    flex-wrap: wrap; */
     align-items: stretch;
     /*background-color: #640bd8;*/
 }
 #country-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     list-style-type: none;
 }
 .card {
-    display: flex;
     background-color: #16c76eb0;
     align-items: stretch;
     margin: 5px;
