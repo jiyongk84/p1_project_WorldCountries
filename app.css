@@ -46,14 +46,26 @@ input {
 }
 #country-cards {
     display: flex;
-    background-color: #640bd8;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    /*background-color: #640bd8;*/
 }
 #country-list {
+    display: flex;
     list-style-type: none;
 }
 .card {
-    background-color: #19c0f3;
-    margin: auto;
-    padding-left: 30px;
-    padding-right: 30px;
+    display: flex;
+    background-color: #16c76eb0;
+    align-items: stretch;
+    margin: 5px;
+    padding: 0.7rem;
+    transition: 0.10s ease-in;
+    border-radius: 5px;
+    border: #bacdd8;
+}
+
+.card:hover {
+    transform: translateY(-15px);
 }
