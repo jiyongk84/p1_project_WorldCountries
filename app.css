@@ -45,22 +45,20 @@ input {
     justify-content: right;
     
 }
-#country-cards {
-    display: grid;
-    /* flex-direction: column;
-    flex-wrap: wrap; */
+.country-cards {
+    display: flex;
+    flex-wrap: wrap;
     align-items: stretch;
-    /*background-color: #640bd8;*/
+    justify-content: center;
+    gap: 15px;
 }
-#country-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    list-style-type: none;
-}
+
 .card {
+    display: flex;
     background-color: #16c76eb0;
-    align-items: stretch;
-    margin: 5px;
+    max-width: 330px;
+    text-align: left;
+    margin: 5px 5px;
     padding: 0.7rem;
     transition: 0.10s ease-in;
     border-radius: 5px;
