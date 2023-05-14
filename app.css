@@ -1,9 +1,23 @@
-
+body {
+    font-family: 'Inter', sans-serif;
+}
+div.country {   
+    font-family: 'Roboto', sans-serif;
+}
 header {
+    display: flex;
+    text-align: center;
+    justify-content: center;
     background-color: #e77213;
     height: 100px;
 }
 
+label {
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+    color: #ffffff;
+}
 h1 {
     color:#2c1c05;
     text-align: center;
@@ -13,11 +27,13 @@ h1 {
     display: flex;
     justify-content: center;
 
+
 }
 
-#searchBar {
-    background-color: black;
+.searchBar {
+    background: #1346ec;
     padding: 10px;
+    width: 400px;
 }
 
 input {
@@ -29,22 +45,26 @@ input {
 #inputBox {
     display: inline-flex;
     border-radius: 10px;
-    border: 3px solid #eeeeeeea;
-    transition: .3s border-color;
+    border: 1px solid #eeeeeeea;
+    transition: 2s border-color;
+    margin-left: 70px;
+    font-size: 15px;
 }
 #inputBox:hover {
-    border: 2px solid #aaa;
+    border: 5px solid #aaa;
 }
 
-.submit {
+button {
     font-size: 20px;
     border-radius: 5px;
-    background-color: #0cbb15;
     cursor: pointer;
-    transition: all 0.5s;
-    justify-content: right;
-    
+    margin-left: 10px;
 }
+
+button:focus {
+    background-color: #da0d0d;
+}
+
 .country-cards {
     display: flex;
     flex-wrap: wrap;
@@ -63,6 +83,7 @@ input {
     transition: 0.10s ease-in;
     border-radius: 5px;
     border: #bacdd8;
+    font-size: 15px;
 }
 
 .card:hover {
