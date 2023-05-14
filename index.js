@@ -7,7 +7,19 @@ function worldCountries() {
             form.reset()
         })
     })
-}    
+}
+const button = document.querySelector('button');
+
+button.style.backgroundColor = 'green';
+
+button.addEventListener('mouseover', () => {
+  button.style.backgroundColor = 'yellow';
+});
+
+button.addEventListener('mouseout', () => {
+  button.style.backgroundColor = 'green';
+});
+
 
 const searchBox = document.querySelector('#inputBox')
 const submitButton = document.querySelector('.submit')
