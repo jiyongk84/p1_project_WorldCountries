@@ -1,8 +1,10 @@
 function worldCountries() {
     document.addEventListener('DOMContentLoaded', () => {
-        document.querySelector('form').addEventListener('submit', (event) => {
+        let form = document.querySelector('form')
+        form.addEventListener('submit', (event) => {
             event.preventDefault()
-        getCountries(event.target.inputBox)
+            getCountries(event.target.inputBox)
+            form.reset()
         })
     })
 }    
@@ -32,6 +34,7 @@ function getCountries() {
           //.catch(error => console.error('Error fetching data: ' + error));
         
       }//);
+
       function listOneCountry(country) {
         let card = document.createElement('li')
         card.className = 'card'
