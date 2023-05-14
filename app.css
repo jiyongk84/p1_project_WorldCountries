@@ -1,11 +1,17 @@
+header {
+    background-color: #4fe713;
+    height: 100px;
+}
+
 h1 {
-    color:#0c9ee2;
+    color:#ff9a02;
     text-align: center;
 }
 
 .container {
     display: flex;
     justify-content: center;
+
 }
 
 #searchBar {
@@ -41,4 +47,9 @@ input {
 
 #country-cards {
     display: flex;
+    background-color:#67b9c7 
+}
+
+#country-list {
+    list-style-type: none;
 }
