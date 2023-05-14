@@ -11,14 +11,24 @@ function worldCountries() {
 
 const searchBox = document.querySelector('#inputBox')
 const submitButton = document.querySelector('.submit')
-
+const container = document.querySelector('#country-cards')
 function getCountries() {
         const inputValue = searchBox.value.trim();
-      
+
         if (inputValue === '') {
-          alert('Please enter a search term.');
+            alert('Please enter a search term.');
           return;
         }
+    
+        searchBox.addEventListener('blur', (event) => {
+            const inputValue = searchBox.value.toLowerCase();
+            const existingElement = container.querySelector('#country-list').contains(`${inputValue})`);
+          
+            if (existingElement) {
+              event.preventDefault();
+              alert('Duplicate value found!');
+            }
+        })
     fetch('https://restcountries.com/v3.1/all')
     .then((resp) => resp.json())
     .then(countryData => {
@@ -44,6 +54,7 @@ function getCountries() {
             <p> Capital City: ${country.capital} </p>
             <p> Official Language(s): ${Object.values(country.languages)}</p>
             <p> Continent: ${country.region} </p>
+            <p> Currency: ${Object.keys(country.currencies)} </p>
             <img src="${country.flags.png}">
             </div> `
          
