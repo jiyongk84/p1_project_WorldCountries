@@ -10,7 +10,13 @@ function worldCountries() {
 function listOneCountry(country) {
     let card = document.createElement('li')
     card.className = 'card'
-    card.innerHTML = Object.values(country.name)
+    card.innerHTML = `
+        <div class="country">
+            <h3>${country.name.common}</h3>
+        <p> Capital City: ${country.capital} </p>
+        <img src="${country.flags.png}">
+        </div> `
+     
     document.querySelector('#country-list').appendChild(card)
 }
 
