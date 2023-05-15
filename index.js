@@ -56,9 +56,7 @@ function getCountries() {
               displayNoResult();
             }
           })
-          //.catch(error => console.error('Error fetching data: ' + error));
-        
-      }//);
+      }
 
       function listOneCountry(country) {
         let card = document.createElement('div')
